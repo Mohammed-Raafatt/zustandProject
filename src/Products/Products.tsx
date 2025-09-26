@@ -1,10 +1,10 @@
 
-import  {  useEffect, useState} from 'react'
+import  {  useEffect} from 'react'
 import { useProdcutsStore } from '../store/ProductsStore';
 import { useTranslation } from 'react-i18next';
 
 
-export default function Products({local}) {
+export default function Products({local}:any) {
 
   const { t } = useTranslation();
  
