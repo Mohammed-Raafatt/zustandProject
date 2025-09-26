@@ -1,11 +1,19 @@
 import axios from "axios"
 import { create } from "zustand";
 
+type category = {
+  name:string;
+}
 
 type product = {
-  title:String;
-  id:Number;
+  title:string;
+  id:number;
   price:number;
+  imageCover:string;
+  category:category;
+  ratingsAverage:number;
+ 
+  
 }
 
 interface productsType {

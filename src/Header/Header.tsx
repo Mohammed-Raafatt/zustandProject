@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography'
 import { useTranslation } from 'react-i18next';
 import Button from '@mui/material/Button'
 
-export default function Header({setLocal,local}) {
+export default function Header({setLocal,local}:any) {
     
     
     const { t, i18n } = useTranslation();
@@ -24,11 +24,11 @@ export default function Header({setLocal,local}) {
   
   return <>
       <AppBar sx={{backgroundColor:"#30a946" }} position="fixed" color="primary">
-          <Toolbar dir={local=="ar"? 'rtl' : 'ltr'} onClick={()=>{changeLang()}} sx={{display:"flex" , justifyContent:"space-between"}}>
-              <Typography variant="h6">
+          <Toolbar dir={local=="ar"? 'rtl' : 'ltr'}  sx={{display:"flex" , justifyContent:"space-between"}}>
+              <Typography variant="h6" >
                   {t("My Products")}
               </Typography>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" onClick={()=>{changeLang()}}>
                 {Lang=="ar"?'انجليزي':'Arabic'}
               </Button>
           </Toolbar>

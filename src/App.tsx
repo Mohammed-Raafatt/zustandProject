@@ -2,9 +2,11 @@
 import './App.css'
 import Products from './Products/Products'
 import Header from './Header/Header'
-import Navbar from './navbar/Navbar'
-import Home from './Home/Home'
+
 import { useState } from 'react'
+import Cart from './Components/Cart/Cart'
+
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
   
    <Header local={local}  setLocal={setLocal} />
     <Products local={local} />
+    <Cart/>
   </>
 }
 
